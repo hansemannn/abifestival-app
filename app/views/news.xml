@@ -1,0 +1,7 @@
+<Alloy>
+	<Window title="News" onOpen="loadNews">
+		<ListView id="list" onItemclick="openNews">
+			<RefreshControl id ="refreshControl" platform="ios" onRefreshstart="loadNews" />
+		</ListView>
+	</Window>
+</Alloy>

@@ -1,0 +1,11 @@
+<Alloy>
+	<Window title="Einstellungen">
+		<ListView class="listView" onItemclick="performAction">
+			<ListSection>
+				<ListItem title="Impressum" itemId="imprint" />
+				<ListItem title="Bewertung abgeben" itemId="rateApp" />
+				<ListItem title="Fehler melden" itemId="reportError" />
+			</ListSection>
+		</ListView>
+	</Window>
+</Alloy>

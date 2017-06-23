@@ -1,0 +1,13 @@
+"Window[platform=ios]": {
+	barColor: "#e74237",
+	navTintColor: "#fff",
+	backButtonTitle: "",
+	backgroundColor: "#fff",
+	titleAttributes: {
+		color: "#fff"
+	}
+}
+
+"TabGroup[platform=ios]": {
+	activeTabIconTint : "#e74237"
+}

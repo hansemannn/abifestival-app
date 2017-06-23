@@ -1,0 +1,16 @@
+
+".icon-news": {
+	icon: "/images/news.png"
+}
+
+".icon-infos": {
+	icon: "/images/infos.png"
+}
+
+".icon-bands": {
+	icon: "/images/bands.png"
+}
+
+".icon-settings": {
+	icon: "/images/settings.png"
+}

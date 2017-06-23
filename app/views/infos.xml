@@ -1,0 +1,7 @@
+<Alloy>
+	<Window title="Infos" onOpen="loadInfos">
+		<ListView id="list" onItemclick="openInfos">
+			<RefreshControl id ="refreshControl" platform="ios" onRefreshstart="loadInfos" />
+		</ListView>
+	</Window>
+</Alloy>

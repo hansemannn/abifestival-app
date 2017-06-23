@@ -1,0 +1,19 @@
+<Alloy>
+	<Window title="Bands" onOpen="loadBands">
+		<ListView id="list" onItemclick="openBand" defaultItemTemplate="BandCell">
+			<Templates>
+				<ItemTemplate name="BandCell">
+					<ImageView bindId="image" class="image" />
+					<View class="labelContainer">
+						<Label bindId="artist" class="title" />
+						<View class="subtitleContainer">
+							<Label bindId="stage" class="subtitle subtitle-left" />
+							<Label bindId="slot" class="subtitle subtitle-right" />
+						</View>
+					</View>
+				</ItemTemplate>
+			</Templates>
+			<RefreshControl id ="refreshControl" platform="ios" onRefreshstart="loadBands" />
+		</ListView>
+	</Window>
+</Alloy>

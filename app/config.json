@@ -1,0 +1,55 @@
+{
+	"global": {
+		"festival": {
+			"name": "Abifestival",
+			"id": 4,
+			"url": "http://abifestival.de",
+			"image": "http://abload.de/img/defaultvzusy.jpg",
+			"contactEmail": "info@abifestival.de",
+			"days": [{
+				"date": "2017-07-09",
+				"name": "Freitag"
+			}, {
+				"date": "2016-07-30",
+				"name": "Samstag"
+			}],
+			"stages": {
+				"Mainstage" : {
+					"num": 0
+				}	
+			},	
+			"socials": {
+				"instagram": "abifestival",
+				"facebook": {
+					"name": "abifestival",
+					"id": "72479961210"
+				}
+			},
+			"location": {
+				"lat": 52.489124,
+				"lon": 7.297357
+			},
+			"stores": {
+				"appstore": "536308221",
+				"googlePlay": "de.ncn.abifestival"
+			},
+			"web": {
+				"base": "http://api.festival-apps.de/pages/4/"
+			},
+			"ui": {
+				"barColor": "#dadada",
+				"barAccentColor": "#d60b52",
+				"barTintColor": "#d60b52"
+			}
+		}
+	},
+	"env:development": {},
+	"env:test": {},
+	"env:production": {},
+	"os:android": {},
+	"os:blackberry": {},
+	"os:ios": {},
+	"os:mobileweb": {},
+	"os:windows": {},
+	"dependencies": {}
+}
