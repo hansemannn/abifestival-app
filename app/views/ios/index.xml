@@ -1,0 +1,16 @@
+<Alloy>
+	<TabGroup>
+		<Tab title="News" class="icon-news">
+			<Require src="news" />
+		</Tab>
+		<Tab title="Infos" class="icon-infos">
+			<Require src="infos" />
+		</Tab>
+		<Tab title="Bands" class="icon-bands">
+			<Require src="bands" />
+		</Tab>
+		<Tab title="Einstellungen" class="icon-settings">
+			<Require src="settings" />
+		</Tab>
+	</TabGroup>
+</Alloy>

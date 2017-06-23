@@ -1,0 +1,47 @@
+
+".image": {
+	left: 15,
+	width: 40,
+	height: 40,
+	borderRadius: 20
+}
+
+".title": {
+	left: 0,
+	top: 7,
+	font: {
+		fontSize: 15
+	}
+}
+
+".subtitle": {
+	color: "#999",
+	font: {
+		fontSize: 12	
+	}
+}
+
+".subtitle-left": {
+	left: 0
+}
+
+".subtitle-right": {
+	left: 10
+}
+
+".labelContainer": {
+	layout: "vertical",
+	left: 70
+}
+
+".subtitleContainer": {
+	top: 2,
+	left: 0,
+	layout: "horizontal"
+}
+
+"#list": {
+	separatorInsets: {
+		left: 70
+	}
+}
