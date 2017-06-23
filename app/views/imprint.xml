@@ -1,0 +1,5 @@
+<Alloy>
+	<Window title="Impressum">
+		<WebView class="webView" />
+	</Window>
+</Alloy>a

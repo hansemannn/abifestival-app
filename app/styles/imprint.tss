@@ -1,0 +1,7 @@
+".webView": {
+	url : 'html/imprint.html',
+	hideShadow: true,
+	top : 0,
+	backgroundColor: '#f0f0f0',
+	enableZoomControls: false
+}
