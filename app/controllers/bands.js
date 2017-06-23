@@ -9,12 +9,14 @@ function loadBands() {
 	api.getBands(function(bands, error) {		
 		var items = [];
 		
+		Ti.API.warn(bands);
+		
 		for (var i = 0; i < bands.length; i++) {
 			var band = bands[i];
 			items.push({
 				template: "BandCell",
 				artist: {
-					text: band.name
+					text: band.name.toUpperCase()
 				},
 				image: {
 					image: band.image

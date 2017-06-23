@@ -37,9 +37,7 @@
 				"base": "http://api.festival-apps.de/pages/4/"
 			},
 			"ui": {
-				"barColor": "#dadada",
-				"barAccentColor": "#d60b52",
-				"barTintColor": "#d60b52"
+				"tintColor": "#e74237"
 			}
 		}
 	},

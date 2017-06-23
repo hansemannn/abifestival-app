@@ -10,9 +10,7 @@ var Social = {
 })(arguments[0]);
 
 function loadNews() {
-	api.getNews(function(news, error) {
-		Ti.API.info(news);
-		
+	api.getNews(function(news, error) {		
 		var items = [];
 		
 		for (var i = 0; i < news.length; i++) {

@@ -1,5 +1,5 @@
 ".webView": {
-	url : 'html/imprint.html',
+	url : '/branding/html/imprint.html',
 	hideShadow: true,
 	top : 0,
 	backgroundColor: '#f0f0f0',

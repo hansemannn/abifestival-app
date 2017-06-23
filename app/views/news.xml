@@ -1,5 +1,5 @@
 <Alloy>
-	<Window title="News" onOpen="loadNews">
+	<Window onOpen="loadNews">
 		<RightNavButton platform="ios" class="icon-instagram" onClick="openInstagram" />
 		<LeftNavButton platform="ios" class="icon-facebook" onClick="openFacebook" />
 		
