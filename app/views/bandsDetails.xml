@@ -1,5 +1,17 @@
 <Alloy>
 	<Window id="window" onOpen="setupUserInterface">
-
+		<RightNavButton platform="ios" class="icon-favorite" id="fav" onClick="toggleFavorite" />
+		
+		<Menu platform="android">
+			<MenuItem onClick="toggleFavorite" id="fav" class="icon-favorite" />
+		</Menu>
+		
+		<ImageView id="image" />
+		<View class="details">
+			<Label id="artist" />
+			<Label id="location" />
+			<Label id="time" />
+		</View>
+		<TextArea id="content" />
 	</Window>
 </Alloy>

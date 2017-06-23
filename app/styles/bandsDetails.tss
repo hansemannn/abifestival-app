@@ -1,0 +1,66 @@
+
+".icon-favorite[platform=ios]": {
+	image: "/images/favIcon.png"
+}
+
+".icon-favorite[platform=android]": {
+	icon: "/images/favIcon.png"
+}
+
+"#image": {
+	width: 100,
+	height: 100,
+	borderRadius: 50,
+	top: 20,
+	left: 20
+}
+
+"#artist": {
+	left: 0,
+	top: 0,
+	minimumFontSize: 16,
+	font: {
+		fontSize: 20,
+		fontWeight: "bold"
+	}
+}
+
+"#location": {
+	top: 10,
+	left: 0,
+	color: "#999",
+	font: {
+		fontSize: 14	
+	}
+}
+
+"#time": {
+	top: 4,
+	left: 0,
+	color: "#999",
+	font: {
+		fontSize: 14	
+	}
+}
+
+"#content": {
+	top: 135,
+	left: 20,
+	right: 20,
+	height: Ti.UI.SIZE,
+	textAlign: Ti.UI.TEXT_ALIGNMENT_JUSTIFY,
+	font: {
+		fontSize: 14
+	},
+	autocorrect: false,
+	autoLink: Ti.UI.AUTOLINK_URLS,
+	editable: false
+}
+
+".details": {
+	top: 20,
+	left: 140,
+	right: 20,
+	height: Ti.UI.SIZE,
+	layout: "vertical"
+}

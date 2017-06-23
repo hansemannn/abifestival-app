@@ -1,13 +1,14 @@
 "Window[platform=ios]": {
-	barColor: "#e74237",
-	navTintColor: "#fff",
+	navTintColor: Alloy.CFG.festival.ui.tintColor,
+	translucent: false,
+	titleImage: "/branding/images/header.png",
 	backButtonTitle: "",
 	backgroundColor: "#fff",
 	titleAttributes: {
-		color: "#fff"
+		color: Alloy.CFG.festival.ui.tintColor
 	}
 }
 
 "TabGroup[platform=ios]": {
-	activeTabIconTint : "#e74237"
+	activeTabIconTint: Alloy.CFG.festival.ui.tintColor
 }
