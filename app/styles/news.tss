@@ -1,0 +1,16 @@
+
+".icon-instagram[platform=ios]": {
+	image: "/images/insta.png"
+}
+
+".icon-facebook[platform=ios]": {
+	image: "/images/fb.png"
+}
+
+".icon-instagram[platform=android]": {
+	icon: "/images/insta.png"
+}
+
+".icon-facebook[platform=android]": {
+	icon: "/images/fb.png"
+}

@@ -1,5 +1,13 @@
 <Alloy>
 	<Window title="News" onOpen="loadNews">
+		<RightNavButton platform="ios" class="icon-instagram" onClick="openInstagram" />
+		<LeftNavButton platform="ios" class="icon-facebook" onClick="openFacebook" />
+		
+		<Menu platform="android">
+			<MenuItem onClick="openInstagram" class="icon-instagram" />
+			<MenuItem onClick="openFacebook" class="icon-facebook" />
+		</Menu>
+		
 		<ListView id="list" onItemclick="openNews">
 			<RefreshControl id ="refreshControl" platform="ios" onRefreshstart="loadNews" />
 		</ListView>
