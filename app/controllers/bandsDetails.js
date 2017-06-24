@@ -25,19 +25,21 @@ function setupUserInterface() {
 function updateFavoritesImage() {
 	if (OS_IOS) {
 		$.fav.setImage(isFavorite() ? FavoriteImage.Active : FavoriteImage.Inactive);
-	} else if(OS_ANDROID) {
+	} else if (OS_ANDROID) {
+		Ti.API.info('fav: ' + isFavorite());
 		var activity = $.window.getActivity();
 		activity.onCreateOptionsMenu = function(e) {
 			var menu = e.menu;
 			menu.clear();
 
 			var item = menu.add({
-				icon: isFavorite() ? FavoriteImage.Active : FavoriteImage.Inactive,
+				icon: isFavorite() === true ? FavoriteImage.Active : FavoriteImage.Inactive,
 				showAsAction : Ti.Android.SHOW_AS_ACTION_ALWAYS
 			});
 			item.addEventListener('click', toggleFavorite);
+			Ti.API.info('inside');
 		};
-		$.window.activity.invalidateOptionsMenu();
+		activity.invalidateOptionsMenu();
 	} else {
 		Ti.API.error('Unimplemented for other platforms!');
 	}
