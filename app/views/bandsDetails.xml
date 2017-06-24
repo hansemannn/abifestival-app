@@ -3,7 +3,7 @@
 		<RightNavButton platform="ios" class="icon-favorite" id="fav" onClick="toggleFavorite" />
 		
 		<Menu platform="android">
-			<MenuItem onClick="toggleFavorite" id="fav" class="icon-favorite" />
+			<MenuItem class="icon-favorite" id="fav" onClick="toggleFavorite" />
 		</Menu>
 		
 		<View class="imageMask">
