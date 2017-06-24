@@ -5,7 +5,11 @@ var moment = require('alloy/moment');
 	
 })(arguments[0]);
 
-function loadInfos() {
+function loadInfos(args) {
+	var showLoader = args.showLoader || false;
+	
+	showLoader && $.loader.show();
+	
 	api.getInfos(function(infos, error) {		
 		var items = [];
 		
@@ -26,9 +30,18 @@ function loadInfos() {
 		$.list.setSections([Ti.UI.createListSection({items: items})]);
 		
 		OS_IOS && $.refreshControl.endRefreshing();
+		showLoader && $.loader.hide();
 	});
 }
 
 function openInfos(e) {
 	Alloy.Globals.tabGroup.activeTab.openWindow(Alloy.createController('/infosDetails', { infos: e.itemId }).getView());
+}
+
+function onPullToRefresh() {
+	loadInfos({ showLoader: false });
+}
+
+function onOpen() {
+	loadInfos({ showLoader: true });
 }

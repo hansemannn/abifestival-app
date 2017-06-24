@@ -1,3 +1,6 @@
+"#list": {
+	footerTitle: ""
+}
 
 ".icon-instagram[platform=ios]": {
 	image: "/images/insta.png"
@@ -13,4 +16,9 @@
 
 ".icon-facebook[platform=android]": {
 	icon: "/images/fb.png"
+}
+
+"#loader": {
+	indicatorColor: "#555",
+	style: Ti.UI.ActivityIndicatorStyle.BIG
 }

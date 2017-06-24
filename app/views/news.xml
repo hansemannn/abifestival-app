@@ -1,5 +1,5 @@
 <Alloy>
-	<Window onOpen="loadNews">
+	<Window onOpen="onOpen">
 		<RightNavButton platform="ios" class="icon-instagram" onClick="openInstagram" />
 		<LeftNavButton platform="ios" class="icon-facebook" onClick="openFacebook" />
 		
@@ -9,7 +9,9 @@
 		</Menu>
 		
 		<ListView id="list" onItemclick="openNews">
-			<RefreshControl id ="refreshControl" platform="ios" onRefreshstart="loadNews" />
+			<RefreshControl id ="refreshControl" platform="ios" onRefreshstart="onPullToRefresh" />
 		</ListView>
+		
+		<ActivityIndicator id="loader" />
 	</Window>
 </Alloy>

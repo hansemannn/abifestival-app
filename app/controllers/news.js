@@ -9,7 +9,15 @@ var Social = {
 	
 })(arguments[0]);
 
-function loadNews() {
+function onOpen() {
+	loadNews({ showLoader: true });
+}
+
+function loadNews(args) {
+	var showLoader = args.showLoader || false;
+	
+	showLoader && $.loader.show();
+	
 	api.getNews(function(news, error) {		
 		var items = [];
 		
@@ -30,6 +38,7 @@ function loadNews() {
 		$.list.setSections([Ti.UI.createListSection({items: items})]);
 		
 		OS_IOS && $.refreshControl.endRefreshing();
+		showLoader && $.loader.hide();
 	});
 }
 
@@ -67,4 +76,8 @@ function openSocialAccount(username, socialNetwork, urlScheme, homepage) {
 	});
 	
 	dia.show();
+}
+
+function onPullToRefresh() {
+	loadNews({ showLoader: false });
 }
