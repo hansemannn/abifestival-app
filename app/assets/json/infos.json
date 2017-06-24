@@ -1,0 +1,47 @@
+[
+   {
+      "title":"Infos",
+      "subtitle":"Alle Eckdaten zum Festival",
+      "url":"infos"
+   },
+   {
+      "title":"Platzordnung",
+      "subtitle":"Wichtige Regeln zum Zelten",
+      "url":"platzordnung"
+   },
+   {
+      "title":"Platzübersicht",
+      "subtitle":"Die Übersicht des gesamten Platzes",
+      "url":"platzuebersicht"
+   },
+   {
+      "title":"Ständeübersicht",
+      "subtitle":"Die Übersicht der Stände auf dem Gelände",
+      "url":"staendeuebersicht"
+   },
+   {
+      "title":"Zelten",
+      "subtitle":"Die Infos zum erfolgreichen Zelten",
+      "url":"zelten"
+   },
+   {
+      "title":"Partybereich",
+      "subtitle":"Alle Infos zu Aftershow-Party in der Nacht",
+      "url":"partybereich"
+   },
+   {
+      "title":"Unter 18?",
+      "subtitle":"Du bist unter 18? - Hier wird dir geholfen!",
+      "url":"unter-18"
+   },
+   {
+      "title":"Anfahrt",
+      "subtitle":"Deine Anfahrtsmölichkeiten zum Gelände",
+      "url":"anfahrt"
+   },
+   {
+      "title":"Sponsoren",
+      "subtitle":"Unsere tatkräftigen Unterstützer!",
+      "url":"sponsoren"
+   }
+]
