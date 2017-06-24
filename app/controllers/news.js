@@ -4,6 +4,7 @@ var Social = {
 	Facebook: 'Facebook',
 	Instagram: 'Instagram'
 };
+var news = [];
 
 (function constructor(args) {
 	
@@ -15,31 +16,35 @@ function onOpen() {
 
 function loadNews(args) {
 	var showLoader = args.showLoader || false;
-	
 	showLoader && $.loader.show();
 	
-	api.getNews(function(news, error) {		
-		var items = [];
+	api.getNews(function(_news, error) {		
+		news = _news
 		
-		for (var i = 0; i < news.length; i++) {
-			var item = news[i];
-			items.push({
-				template: Ti.UI.LIST_ITEM_TEMPLATE_SUBTITLE,
-				properties: {
-					itemId: item,
-					title: item.title,
-					subtitle: moment(item.created_at).format('DD.MM.YYYY, HH:mm') + ' Uhr',
-					height: 43,
-					accessoryType: Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE
-				}
-			});
-		}
-		
-		$.list.setSections([Ti.UI.createListSection({items: items})]);
-		
-		OS_IOS && $.refreshControl.endRefreshing();
 		showLoader && $.loader.hide();
+		refreshUI();
 	});
+}
+
+function refreshUI() {
+	var items = [];
+	
+	for (var i = 0; i < news.length; i++) {
+		var item = news[i];
+		items.push({
+			template: Ti.UI.LIST_ITEM_TEMPLATE_SUBTITLE,
+			properties: {
+				itemId: item,
+				title: item.title,
+				subtitle: moment(item.created_at).format('DD.MM.YYYY, HH:mm') + ' Uhr',
+				height: 43,
+				accessoryType: Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE
+			}
+		});
+	}
+	
+	$.list.setSections([Ti.UI.createListSection({items: items})]);	
+	OS_IOS && $.refreshControl.endRefreshing();
 }
 
 function openNews(e) {
@@ -52,7 +57,7 @@ function openInstagram() {
 }
 
 function openFacebook() {
-	openSocialAccount(Alloy.CFG.festival.socials.facebook, Social.Facebook, 'fb://profile/', 'https://facebook.com');
+	openSocialAccount(Alloy.CFG.festival.socials.facebook.name, Social.Facebook, 'fb://profile/', 'https://facebook.com');
 }
 
 function openSocialAccount(username, socialNetwork, urlScheme, homepage) {
@@ -64,7 +69,7 @@ function openSocialAccount(username, socialNetwork, urlScheme, homepage) {
 		buttonNames: ['Abbrechen', 'Öffnen'],
 		cancel: 0
 	});
-	
+		
 	dia.addEventListener('click', function(e) {
 		if (e.index === 1) {
 			if (Ti.Platform.canOpenURL(urlScheme.split('://')[0] + '://')) {

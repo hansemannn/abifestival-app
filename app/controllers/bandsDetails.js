@@ -5,9 +5,11 @@ var FavoriteImage = {
 };
 
 var band = {};
+var onFavoriteUpdated = null;
 
 (function constructor(args) {
 	band = args.band;	
+	onFavoriteUpdated = args.onFavoriteUpdated;
 })(arguments[0]);
 
 function setupUserInterface() {
@@ -28,6 +30,8 @@ function updateFavoritesImage() {
 	} else {
 		Ti.API.error('Unimplemented for other platforms!');
 	}
+	
+	onFavoriteUpdated();
 }
 
 function isFavorite() {
