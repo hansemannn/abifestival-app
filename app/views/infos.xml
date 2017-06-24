@@ -1,7 +1,8 @@
 <Alloy>
-	<Window title="Infos" onOpen="loadInfos">
+	<Window title="Infos" onOpen="onOpen">
 		<ListView id="list" onItemclick="openInfos">
-			<RefreshControl id ="refreshControl" platform="ios" onRefreshstart="loadInfos" />
+			<RefreshControl id ="refreshControl" platform="ios" onRefreshstart="onPullToRefresh" />
 		</ListView>
+		<ActivityIndicator id="loader" />
 	</Window>
 </Alloy>

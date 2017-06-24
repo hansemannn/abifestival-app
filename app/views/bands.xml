@@ -1,5 +1,5 @@
 <Alloy>
-	<Window title="Bands" onOpen="loadBands">
+	<Window title="Bands" onOpen="onOpen">
 		<ListView id="list" onItemclick="openBand" defaultItemTemplate="BandCell">
 			<Templates>
 				<ItemTemplate name="BandCell">
@@ -13,7 +13,8 @@
 					</View>
 				</ItemTemplate>
 			</Templates>
-			<RefreshControl id ="refreshControl" platform="ios" onRefreshstart="loadBands" />
+			<RefreshControl id ="refreshControl" platform="ios" onRefreshstart="onPullToRefresh" />
 		</ListView>
+		<ActivityIndicator id="loader" />
 	</Window>
 </Alloy>

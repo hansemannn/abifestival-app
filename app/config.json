@@ -14,9 +14,7 @@
 				"name": "Samstag"
 			}],
 			"stages": {
-				"Mainstage" : {
-					"num": 0
-				}	
+				"Mainstage" : 0
 			},	
 			"socials": {
 				"instagram": "abifestival",

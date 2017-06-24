@@ -6,7 +6,9 @@
 			<MenuItem onClick="toggleFavorite" id="fav" class="icon-favorite" />
 		</Menu>
 		
-		<ImageView id="image" />
+		<View class="imageMask">
+			<ImageView id="image" />
+		</View>
 		<View class="details">
 			<Label id="artist" />
 			<Label id="location" />

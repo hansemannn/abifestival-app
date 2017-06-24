@@ -1,6 +1,7 @@
 
 ".image": {
 	left: 15,
+	defaultImage: '/branding/images/default.jpg',
 	width: 40,
 	height: 40,
 	borderRadius: 20
@@ -42,7 +43,13 @@
 }
 
 "#list": {
-	separatorInsets: {
+	listSeparatorInsets: {
 		left: 70
-	}
+	},
+	footerTitle: ""
+}
+
+"#loader": {
+	indicatorColor: "#555",
+	style: Ti.UI.ActivityIndicatorStyle.BIG
 }

@@ -62,7 +62,8 @@
       </manifest>
   </android>
   <modules>
-
+      <module platform="iphone">com.pushwoosh.module</module>
+      <module platform="android">com.pushwoosh.module</module>
   </modules>
   <deployment-targets>
     <target device="android">true</target>
