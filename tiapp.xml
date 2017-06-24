@@ -29,6 +29,23 @@
         <array>
           <string>UIInterfaceOrientationPortrait</string>
         </array>
+        <key>UIBackgroundModes</key>
+        <array>
+          <string>remote-notification</string>
+        </array>
+        <key>UIApplicationShortcutItems</key>
+        <array>
+            <dict>
+                <key>UIApplicationShortcutIconTypeFavorite</key>
+                <string>UIApplicationShortcutIconTypeAdd</string>
+
+                <key>UIApplicationShortcutItemTitle</key>
+                <string>Bands</string>
+                
+                <key>UIApplicationShortcutItemType</key>
+                <string>bands</string>                
+            </dict>
+        </array>
       </dict>
     </plist>
   </ios>
