@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="abifestival" parent="@style/Theme.AppCompat">
+		<item name="colorPrimary">#e74237</item>
+		<item name="colorAccent">#ffffff</item>
+		<item name="android:statusBarColor">#e74237</item>
+		<item name="android:navigationBarColor">#5a2f2d</item>
+	</style>
+</resources>

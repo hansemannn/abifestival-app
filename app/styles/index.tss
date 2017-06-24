@@ -1,15 +1,15 @@
-".container": {
-	backgroundColor:"white"
+'.icon-news': {
+	icon: '/images/news.png'
 }
 
-"Label": {
-	width: Ti.UI.SIZE,
-	height: Ti.UI.SIZE,
-	color: "#000"
+'.icon-infos': {
+	icon: '/images/infos.png'
 }
 
-"#label": {
-	font: {
-		fontSize: 12
-	}
+'.icon-bands': {
+	icon: '/images/bands.png'
+}
+
+'.icon-settings': {
+	icon: '/images/settings.png'
 }

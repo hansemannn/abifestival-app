@@ -1,4 +1,4 @@
-".webView": {
+'.webView': {
 	url : '/branding/web/imprint.html',
 	hideShadow: true,
 	top : 0,

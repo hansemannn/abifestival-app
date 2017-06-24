@@ -11,7 +11,7 @@
   <icon>appicon.png</icon>
   <fullscreen>false</fullscreen>
   <navbar-hidden>false</navbar-hidden>
-  <analytics>true</analytics>
+  <analytics>false</analytics>
   <guid>41d8ce4f-057d-4784-9999-ef66e3cc0d24</guid>
   <property name="ti.ui.defaultunit" type="string">dp</property>
   <property name="run-on-main-thread" type="bool">true</property>
@@ -29,36 +29,12 @@
         <array>
           <string>UIInterfaceOrientationPortrait</string>
         </array>
-        <key>UIStatusBarStyle</key>
-        <string>UIStatusBarStyleDefault</string>
       </dict>
     </plist>
   </ios>
   <android xmlns:android="http://schemas.android.com/apk/res/android">
       <manifest android:installLocation="preferExternal" android:versionCode="23" android:versionName="6.0.0" package="de.ncn.abifestival">
-          <supports-screens android:anyDensity="true"/>
-          <uses-permission android:name="android.permission.INTERNET"/>
-          <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-          <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
-          <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-          <uses-permission android:name="android.permission.VIBRATE"/>
-          <uses-permission android:name="android.permission.WAKE_LOCK"/>
-          <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
-          <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE"/>
-          <permission android:name="de.ncn.abifestival.permission.C2D_MESSAGE" android:protectionLevel="signature"/>
-          <uses-permission android:name="de.ncn.abifestival.permission.C2D_MESSAGE"/>
-          <application android:screenOrientation="portrait" android:theme="@style/Theme.Abifestival">
-              <service android:name="com.parse.PushService"/>
-              <receiver android:name="com.parse.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
-                  <intent-filter>
-                      <action android:name="com.google.android.c2dm.intent.RECEIVE"/>
-                      <action android:name="com.google.android.c2dm.intent.REGISTRATION"/>
-                      <category android:name="de.ncn.abifestival"/>
-                  </intent-filter>
-              </receiver>
-              <activity
-                  android:configChanges="keyboardHidden|orientation" android:name="org.appcelerator.titanium.TiActivity"/>
-          </application>
+          <application android:screenOrientation="portrait" android:theme="@style/abifestival" />
       </manifest>
   </android>
   <modules>
@@ -71,7 +47,7 @@
     <target device="iphone">true</target>
     <target device="mobileweb">false</target>
   </deployment-targets>
-  <sdk-version>6.1.1.v20170622183547</sdk-version>
+  <sdk-version>6.2.0.v20170623140932</sdk-version>
   <plugins>
     <plugin version="1.0">ti.alloy</plugin>
   </plugins>

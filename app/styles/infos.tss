@@ -1,4 +1,4 @@
-"#loader": {
-	indicatorColor: "#555",
+'#loader': {
+	indicatorColor: '#555',
 	style: Ti.UI.ActivityIndicatorStyle.BIG
 }
