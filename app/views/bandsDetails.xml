@@ -1,11 +1,7 @@
 <Alloy>
 	<Window id="window" onOpen="setupUserInterface">
 		<RightNavButton platform="ios" class="icon-favorite" id="fav" onClick="toggleFavorite" />
-		
-		<Menu platform="android">
-			<MenuItem class="icon-favorite" id="fav" onClick="toggleFavorite" />
-		</Menu>
-		
+
 		<View class="imageMask">
 			<ImageView id="image" />
 		</View>

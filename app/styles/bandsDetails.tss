@@ -3,11 +3,11 @@
 }
 
 '.icon-favorite[platform=ios]': {
-	image: '/images/favIcon.png'
+	image: '/images/favIconActive.png'
 }
 
 '.icon-favorite[platform=android]': {
-	icon: '/images/favIcon.png'
+	icon: '/images/favIconActive.png'
 }
 
 '#image': {
