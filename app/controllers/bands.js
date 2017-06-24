@@ -1,5 +1,6 @@
 var api = require('/api');
 var moment = require('alloy/moment');
+var bands = [];
 
 (function constructor(args) {
 	
@@ -7,41 +8,48 @@ var moment = require('alloy/moment');
 
 function loadBands(args) {
 	var showLoader = args.showLoader || false;
-	
 	showLoader && $.loader.show();
 	
-	api.getBands(function(bands, error) {		
-		var items = [];
-				
-		for (var i = 0; i < bands.length; i++) {
-			var band = bands[i];
-			items.push({
-				template: "BandCell",
-				artist: {
-					text: band.name.toUpperCase()
-				},
-				image: {
-					image: band.image !== null ? band.image : '/branding/images/default.jpg'
-				},
-				stage: {
-					text: '📍 ' + band.location
-				},
-				slot: {
-					text: formattedTime(band.starttime, band.endtime)
-				},
-				properties: {
-					itemId: band,
-					height: 50,
-					accessoryType: Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE
-				}
-			});
-		}
+	api.getBands(function(_bands, error) {
+		bands = _bands;
 		
-		$.list.setSections([Ti.UI.createListSection({items: items})]);
-		
-		OS_IOS && $.refreshControl.endRefreshing();
 		showLoader && $.loader.hide();
+		refreshUI();
 	});
+}
+
+function refreshUI() {
+	var items = [];
+
+	bands.forEach(function(band) {
+		items.push({
+			template: "BandCell",
+			artist: {
+				text: band.name.toUpperCase() + (isFavorite(band.id) ? ' ⭐️' : '')
+			},
+			image: {
+				image: band.image !== null ? band.image : '/branding/images/default.jpg'
+			},
+			stage: {
+				text: '📍 ' + band.location
+			},
+			slot: {
+				text: formattedTime(band.starttime, band.endtime)
+			},
+			properties: {
+				itemId: band,
+				height: 50,
+				accessoryType: Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE
+			}
+		});
+	});
+	
+	$.list.setSections([Ti.UI.createListSection({items: items})]);	
+	OS_IOS && $.refreshControl.endRefreshing();
+}
+
+function isFavorite(bandId) {
+	return Ti.App.Properties.getList('favorites', []).indexOf(bandId) !== -1;
 }
 
 function formattedTime(start, end) {
@@ -49,7 +57,10 @@ function formattedTime(start, end) {
 }
 
 function openBand(e) {
-	Alloy.Globals.tabGroup.activeTab.openWindow(Alloy.createController('/bandsDetails', { band: e.itemId }).getView());
+	Alloy.Globals.tabGroup.activeTab.openWindow(Alloy.createController('/bandsDetails', { 
+		band: e.itemId,
+		onFavoriteUpdated: refreshUI
+	}).getView());
 }
 
 function onPullToRefresh() {
