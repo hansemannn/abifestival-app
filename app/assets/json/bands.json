@@ -1,0 +1,40 @@
+[
+   {
+      "id":"364",
+      "festival_id":"4",
+      "name":"Bands folgen in K\u00fcrze",
+      "www":"",
+      "facebook":"",
+      "audiourl":"",
+      "text":"",
+      "starttime":"2016-06-24 20:00:00",
+      "endtime":"2016-06-24 21:00:00",
+      "time_tba":false,
+      "genre":"",
+      "image":null,
+      "location":"Mainstage",
+      "sort":"0",
+      "active":true,
+      "startutime":1466791200,
+      "endutime":1466794800
+   },
+   {
+      "id":"98",
+      "festival_id":"4",
+      "name":"Bloodhound Gang",
+      "www":"http:\/\/www.bloodhoundgang.com\/",
+      "facebook":"http:\/\/www.facebook.com\/bloodhoundgang",
+      "audiourl":"",
+      "text":"Es gibt kein Klischee, das sie nicht bedienen und kein Ger\u00fccht \u00fcber sie, welches sich noch nicht bewahrheitet hat. Wo sie auftauchen l\u00e4uten Sittenw\u00e4chter die Alarmglocken. Wir pr\u00e4sentieren die verr\u00fccktesten Musiker die die Vereinigten Staaten auf die freie Welt losgelassen haben: THE BLOODHOUND GANG is back! Ein neues Album ist in der Mache und es stehen Exklusivhows beim Omas Teich und dem Greenville Festival an.\r\n\r\nDie \"Bluthunde\", allen voran Frontmann Jimmy Pop und Basser Evil Jared Hasselhoff, sind bekennende Deutschland- und Scooter-Fans. Evil Jared wohnt seit mehreren Jahren in Berlin, ist Freund eines bekannten deutschen Kr\u00e4uterlik\u00f6rs und hat schon jeden Spa\u00df mitgemacht, den Stefan Raab in den vergangenen Jahren ins Fernsehen gebracht hat. Sie nehmen Backstagebereiche auseinander, brennen Fernsehstudios ab und benehmen sich auch auf der B\u00fchne nicht besser. Gerade deshalb machen sie soviel Spa\u00df.\r\n\r\nDie Band ist bekannt f\u00fcr ihre teilweise geschmacklosen Songtexte die auf den ersten Blick einfach wie die Spinnerei kleiner, pubertierender Jungs klingen und oft auch einfach keinen Sinn ergeben m\u00f6gen. Trotzdem sind \"Fire, Water, Burn\", \"The Bad Touch\", \"Along Comes Mary\" oder \"Foxtrot, Uniform, Charlie, Kilo\" erfolgreiche Chartbreaker. Denn auf den zweiten Blick finden sich jede Menge Anspielungen auf die Amerikanische Popkultur, verpackt in die unterschiedlichsten Musikrichtungen, in den Songs wieder.\r\n\r\nDr\u00f6hnt einem bei \"Along Comes Mary\" noch ein ordentliches Gitarrenbrett mit dickem Bass ins Gesicht, drehen die Jungs mit Songs wie \"Screwing You On The Beach At Night\" den Spie\u00df komplett um und orientieren sich am besten\/schlimmsten was uns die Eurotechno Welle der 90er bescheren konnte und es macht trotzdem Spa\u00df!\r\n\r\nWir freuen uns auf das Verr\u00fcckteste was es bis jetzt am Teich gegeben hat.",
+      "starttime":"2017-07-01 22:30:00",
+      "endtime":"2017-07-01 23:45:00",
+      "time_tba":false,
+      "genre":"Alternative Rock, Crossover, Hip-Hop, Postpunk ",
+      "image":"http:\/\/api.festival-apps.de\/uploads\/bands\/92e324b792ccd40df121675c15030ce2a26dd45b_640x640.jpg",
+      "location":"Main Stage",
+      "sort":"1",
+      "active":true,
+      "startutime":1498941000,
+      "endutime":1498945500
+   }
+]
