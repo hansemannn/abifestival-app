@@ -1,24 +1,20 @@
-"#list": {
-	footerTitle: ""
+'.icon-instagram[platform=ios]': {
+	image: '/images/insta.png'
 }
 
-".icon-instagram[platform=ios]": {
-	image: "/images/insta.png"
+'.icon-facebook[platform=ios]': {
+	image: '/images/fb.png'
 }
 
-".icon-facebook[platform=ios]": {
-	image: "/images/fb.png"
+'.icon-instagram[platform=android]': {
+	icon: '/images/insta.png'
 }
 
-".icon-instagram[platform=android]": {
-	icon: "/images/insta.png"
+'.icon-facebook[platform=android]': {
+	icon: '/images/fb.png'
 }
 
-".icon-facebook[platform=android]": {
-	icon: "/images/fb.png"
-}
-
-"#loader": {
-	indicatorColor: "#555",
+'#loader': {
+	indicatorColor: '#555',
 	style: Ti.UI.ActivityIndicatorStyle.BIG
 }

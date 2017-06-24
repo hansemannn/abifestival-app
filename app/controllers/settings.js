@@ -28,7 +28,7 @@ function rateApp() {
 }
 
 function showImprint() {
-	Alloy.Globals.tabGroup.activeTab.openWindow(Alloy.createController('imprint').getView());
+	Alloy.Globals.tabGroup.activeTab.open(Alloy.createController('imprint').getView());
 }
 
 function reportError() {

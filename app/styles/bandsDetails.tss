@@ -1,62 +1,61 @@
 
-".icon-favorite[platform=ios]": {
-	image: "/images/favIcon.png"
+'.icon-favorite[platform=ios]': {
+	image: '/images/favIcon.png'
 }
 
-".icon-favorite[platform=android]": {
-	icon: "/images/favIcon.png"
+'.icon-favorite[platform=android]': {
+	icon: '/images/favIcon.png'
 }
 
-"#image": {
+'#image': {
 	width: 100,
 	height: 100,
-	defaultImage: "/branding/images/default.jpg",
+	defaultImage: '/branding/images/default.jpg',
 	borderRadius: 50
 }
 
-".imageMask": {
+'.imageMask': {
 	top: 20,
 	left: 20,
 	width: 106,
 	height: 106,
-	backgroundImage: "/images/artist-mask.png"
+	backgroundImage: '/images/artist-mask.png'
 }
 
-"#artist": {
+'#artist': {
 	left: 0,
 	top: 0,
 	minimumFontSize: 16,
 	font: {
 		fontSize: 20,
-		fontWeight: "bold"
+		fontWeight: 'bold'
 	}
 }
 
-"#location": {
+'#location': {
 	top: 10,
 	left: 0,
-	color: "#999",
+	color: '#999',
 	font: {
 		fontSize: 14	
 	}
 }
 
-"#time": {
+'#time': {
 	top: 4,
 	left: 0,
-	color: "#999",
+	color: '#999',
 	font: {
 		fontSize: 14	
 	}
 }
 
-"#content": {
+'#content': {
 	top: 135,
 	left: 20,
 	right: 20,
-	backgroundColor: "transparent",
+	backgroundColor: 'transparent',
 	height: Ti.UI.SIZE,
-	/*textAlign: Ti.UI.TEXT_ALIGNMENT_JUSTIFY,*/
 	font: {
 		fontSize: 14
 	},
@@ -65,10 +64,10 @@
 	editable: false
 }
 
-".details": {
+'.details': {
 	top: 20,
 	left: 140,
 	right: 20,
 	height: Ti.UI.SIZE,
-	layout: "vertical"
+	layout: 'vertical'
 }

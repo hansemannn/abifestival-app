@@ -1,9 +1,12 @@
 
-".listView": {
-	style: Ti.UI.iOS.ListViewStyle.GROUPED,
+'.listView': {
 	rowHeight: 43
 }
 
-"ListItem": {
+'.listView[platform=ios]': {
+	style: Ti.UI.iOS.ListViewStyle.GROUPED,
+}
+
+'ListItem': {
 	accessoryType: Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE
 }

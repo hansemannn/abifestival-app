@@ -1,14 +1,35 @@
-"Window[platform=ios]": {
+'Window[platform=ios]': {
 	navTintColor: Alloy.CFG.festival.ui.tintColor,
 	translucent: false,
-	titleImage: "/branding/images/header.png",
-	backButtonTitle: "",
-	backgroundColor: "#fff",
+	titleImage: '/branding/images/header.png',
+	backButtonTitle: '',
+	backgroundColor: '#fff',
 	titleAttributes: {
 		color: Alloy.CFG.festival.ui.tintColor
 	}
 }
 
-"TabGroup[platform=ios]": {
+'Label[platform=android]': {
+	color: '#000' // Android labels are white by default, make them black
+}
+
+'TabGroup[platform=ios]': {
 	activeTabIconTint: Alloy.CFG.festival.ui.tintColor
+}
+
+'ListItem': {
+	backgroundColor: '#fff'
+}
+
+'ListItem[platform=android]': {
+	left: 15,
+	color: '#000'
+}
+
+'ListView': {
+	backgroundColor: '#fff'
+}
+
+'ListView[platform=ios]': {
+	footerTitle: '' // Little hack to hide all empty / unused cells
 }

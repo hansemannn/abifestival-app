@@ -1,5 +1,5 @@
 
-".image": {
+'.image': {
 	left: 15,
 	defaultImage: '/branding/images/default.jpg',
 	width: 40,
@@ -7,49 +7,48 @@
 	borderRadius: 20
 }
 
-".title": {
+'.title': {
 	left: 0,
 	top: 7,
 	font: {
 		fontSize: 15,
-		fontWeight: "bold"
+		fontWeight: 'bold'
 	}
 }
 
-".subtitle": {
-	color: "#999",
+'.subtitle': {
+	color: '#999',
 	font: {
 		fontSize: 12	
 	}
 }
 
-".subtitle-left": {
+'.subtitle-left': {
 	left: 0
 }
 
-".subtitle-right": {
+'.subtitle-right': {
 	left: 10
 }
 
-".labelContainer": {
-	layout: "vertical",
+'.labelContainer': {
+	layout: 'vertical',
 	left: 70
 }
 
-".subtitleContainer": {
+'.subtitleContainer': {
 	top: 2,
 	left: 0,
-	layout: "horizontal"
+	layout: 'horizontal'
 }
 
-"#list": {
+'#list': {
 	listSeparatorInsets: {
 		left: 70
-	},
-	footerTitle: ""
+	}
 }
 
-"#loader": {
-	indicatorColor: "#555",
+'#loader': {
+	indicatorColor: '#555',
 	style: Ti.UI.ActivityIndicatorStyle.BIG
 }

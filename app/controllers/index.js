@@ -1,1 +1,2 @@
-Ti.API.error('Platform not supported!');
+Alloy.Globals.tabGroup = $.index;
+$.index.open();

@@ -33,13 +33,13 @@ function refreshUI() {
 		var item = news[i];
 		items.push({
 			template: Ti.UI.LIST_ITEM_TEMPLATE_SUBTITLE,
-			properties: {
+			properties: _.extend({
 				itemId: item,
 				title: item.title,
 				subtitle: moment(item.created_at).format('DD.MM.YYYY, HH:mm') + ' Uhr',
 				height: 43,
 				accessoryType: Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE
-			}
+			}, OS_IOS ? {} : {color: '#000', left: 15}) // FIXME: Remove when 6.2.0 released
 		});
 	}
 	
@@ -49,7 +49,7 @@ function refreshUI() {
 
 function openNews(e) {
 	var news = e.itemId;		
-	Alloy.Globals.tabGroup.activeTab.openWindow(Alloy.createController('/newsDetails', { news: news }).getView());
+	Alloy.Globals.tabGroup.activeTab.open(Alloy.createController('/newsDetails', { news: news }).getView());
 }
 
 function openInstagram() {
