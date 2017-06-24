@@ -37,7 +37,7 @@ function refreshUI() {
 				text: formattedTime(band.starttime, band.endtime)
 			},
 			properties: _.extend({
-				itemId: band,
+				itemId: band.id,
 				height: 50,
 				accessoryType: Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE
 			}, OS_IOS ? {} : {color: '#000', left: 15}) // FIXME: Remove when 6.2.0 released
@@ -58,7 +58,7 @@ function formattedTime(start, end) {
 
 function openBand(e) {
 	Alloy.Globals.tabGroup.activeTab.open(Alloy.createController('/bandsDetails', { 
-		band: e.itemId,
+		band: _.findWhere(bands, { id: e.itemId }),
 		onFavoriteUpdated: refreshUI
 	}).getView());
 }

@@ -29,27 +29,25 @@ function loadNews(args) {
 function refreshUI() {
 	var items = [];
 	
-	for (var i = 0; i < news.length; i++) {
-		var item = news[i];
+	news.forEach(function(item) {
 		items.push({
 			template: Ti.UI.LIST_ITEM_TEMPLATE_SUBTITLE,
 			properties: _.extend({
-				itemId: item,
+				itemId: item.id,
 				title: item.title,
 				subtitle: moment(item.created_at).format('DD.MM.YYYY, HH:mm') + ' Uhr',
 				height: 43,
 				accessoryType: Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE
 			}, OS_IOS ? {} : {color: '#000', left: 15}) // FIXME: Remove when 6.2.0 released
 		});
-	}
+	});
 	
 	$.list.setSections([Ti.UI.createListSection({items: items})]);	
 	OS_IOS && $.refreshControl.endRefreshing();
 }
 
 function openNews(e) {
-	var news = e.itemId;		
-	Alloy.Globals.tabGroup.activeTab.open(Alloy.createController('/newsDetails', { news: news }).getView());
+	Alloy.Globals.tabGroup.activeTab.open(Alloy.createController('/newsDetails', { news: _.findWhere(news, { id: e.itemId }) }).getView());
 }
 
 function openInstagram() {

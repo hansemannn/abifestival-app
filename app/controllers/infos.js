@@ -22,26 +22,25 @@ function loadInfos(args) {
 function refreshUI() {
 	var items = [];
 	
-	for (var i = 0; i < infos.length; i++) {
-		var info = infos[i];
+	infos.forEach(function(info) {
 		items.push({
 			template: Ti.UI.LIST_ITEM_TEMPLATE_SUBTITLE,
 			properties: _.extend({
-				itemId: info,
+				itemId: info.id,
 				title: info.title,
-				subtitle: moment(info.created_at).format('DD.MM.YYYY, HH:mm') + ' Uhr',
+				subtitle: info.subtitle,
 				height: 43,
 				accessoryType: Ti.UI.LIST_ACCESSORY_TYPE_DISCLOSURE
 			}, OS_IOS ? {} : {color: '#000', left: 15}) // FIXME: Remove when 6.2.0 released
 		});
-	}
+	});
 	
 	$.list.setSections([Ti.UI.createListSection({items: items})]);
 	OS_IOS && $.refreshControl.endRefreshing();
 }
 
 function openInfos(e) {
-	Alloy.Globals.tabGroup.activeTab.open(Alloy.createController('/infosDetails', { infos: e.itemId }).getView());
+	Alloy.Globals.tabGroup.activeTab.open(Alloy.createController('/infosDetails', { infos: _.findWhere(infos, { id: e.itemId }) }).getView());
 }
 
 function onPullToRefresh() {

@@ -26,7 +26,18 @@ function updateFavoritesImage() {
 	if (OS_IOS) {
 		$.fav.setImage(isFavorite() ? FavoriteImage.Active : FavoriteImage.Inactive);
 	} else if(OS_ANDROID) {
-		$.fav.setIcon(isFavorite() ? FavoriteImage.Active : FavoriteImage.Inactive);
+		var activity = $.window.getActivity();
+		activity.onCreateOptionsMenu = function(e) {
+			var menu = e.menu;
+			menu.clear();
+
+			var item = menu.add({
+				icon: isFavorite() ? FavoriteImage.Active : FavoriteImage.Inactive,
+				showAsAction : Ti.Android.SHOW_AS_ACTION_ALWAYS
+			});
+			item.addEventListener('click', toggleFavorite);
+		};
+		$.window.activity.invalidateOptionsMenu();
 	} else {
 		Ti.API.error('Unimplemented for other platforms!');
 	}

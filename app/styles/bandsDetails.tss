@@ -1,3 +1,6 @@
+"Window": {
+	backgroundColor: '#fff'
+}
 
 '.icon-favorite[platform=ios]': {
 	image: '/images/favIcon.png'

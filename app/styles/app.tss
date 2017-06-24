@@ -9,6 +9,14 @@
 	}
 }
 
+'MenuItem[platform=android]': {
+	showAsAction: Ti.Android.SHOW_AS_ACTION_ALWAYS
+}
+
+'TextArea': {
+	color: '#000'
+}
+
 'Label[platform=android]': {
 	color: '#000' // Android labels are white by default, make them black
 }

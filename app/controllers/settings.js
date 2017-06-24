@@ -21,9 +21,9 @@ function performAction(e) {
 
 function rateApp() {
 	if (Ti.Platform.osname === 'android') {
-		Ti.Platform.openURL(Ti.App.Properties.getString("googlePlayLink"));
+		Ti.Platform.openURL('https://play.google.com/store/apps/details?id=' + Alloy.CFG.festival.stores.googlePlay);
 	} else {
-		Ti.Platform.openURL("https://itunes.apple.com/de/app/abifestival/id" + Alloy.CFG.festival.stores.appstore);
+		Ti.Platform.openURL('https://itunes.apple.com/de/app/abifestival/id' + Alloy.CFG.festival.stores.appstore);
 	}
 }
 
