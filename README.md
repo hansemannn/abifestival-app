@@ -7,7 +7,7 @@ by high-school graduates in Germany. It is open source to share the concepts beh
 application and it includes native features like remote push-notifications with PushWoosh and a 
 completely native user-experience.
 
-<img alt="App Store" src="https://abload.de/img/af6spxy.png" width="900" />
+<img alt="App Store" src="https://abload.de/img/af90s5c.png" width="900" />
 
 ### Features (Selection)
 
