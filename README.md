@@ -2,12 +2,13 @@
 
 [![Contact](http://hans-knoechel.de/shields/shield-twitter.svg)](http://twitter.com/hansemannnn)
 
-The Abifestival App is a cross-platform Titanium app made for the free festival "Abifestival" organized 
-by high-school graduates in Germany. It is open source to share the concepts behind making a Titanium 
+The Abifestival App is a cross-platform Titanium app made for the music-festival "Abifestival" organized 
+by high-school graduates in Germany. The app was initially build in 2012 as a classic Titanium project
+and has recently been rewritten to Alloy. It is open source to share the concepts behind making a Titanium 
 application and it includes native features like remote push-notifications with PushWoosh and a 
 completely native user-experience.
 
-<img alt="App Store" src="https://abload.de/img/af90s5c.png" width="900" />
+<img alt="App Store" src="https://abload.de/img/affvxub.png" width="900" />
 
 ### Features (Selection)
 
