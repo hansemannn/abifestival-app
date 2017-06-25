@@ -3,6 +3,7 @@
 		<View class="tabbedBarContainer">
 			<Widget platform="android" src="com.skypanther.segmentedcontrol" id="tabbedBar" />
 			<TabbedBar platform="ios" id="tabbedBar" onClick="toggleDay" />
+			<View class="tabbedBarSeparator" />
 		</View>
 		<ListView id="list" onItemclick="openBand" defaultItemTemplate="BandCell">
 			<Templates>

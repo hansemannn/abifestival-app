@@ -57,7 +57,7 @@
 ".tabbedBarContainer": {
 	top: 0,
 	height: 50,
-	backgroundColor: '#f0f0f0'
+	backgroundColor: '#fbfbfb'
 }
 
 '#tabbedBar': {
@@ -81,6 +81,12 @@
 		fontWeight: 'bold',
 		fontSize: '14'
 	}
+}
+
+'.tabbedBarSeparator': {
+	height: 0.5,
+	backgroundColor: '#9f9f9f',
+	bottom: 0
 }
 
 "#placeholder": {
