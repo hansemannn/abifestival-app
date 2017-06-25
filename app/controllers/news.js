@@ -29,7 +29,7 @@ function loadNews(args) {
 function refreshUI() {
 	var items = [];
 	
-	news.forEach(function(item) {
+	news && news.forEach(function(item) {
 		items.push({
 			template: Ti.UI.LIST_ITEM_TEMPLATE_SUBTITLE,
 			properties: _.extend({

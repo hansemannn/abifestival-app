@@ -55,6 +55,7 @@
       </manifest>
   </android>
   <modules>
+      <module platform="iphone">ti.reviewdialog</module>
       <module platform="iphone">com.pushwoosh.module</module>
       <module platform="android">com.pushwoosh.module</module>
   </modules>

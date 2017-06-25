@@ -6,7 +6,7 @@
 function performAction(e) {	
 	switch (e.itemId) {
 		case 'rateApp':
-			rateApp();
+			rateApp(e);
 			break;
 		case 'imprint':
 			showImprint();
@@ -19,11 +19,18 @@ function performAction(e) {
 	}
 }
 
-function rateApp() {
-	if (Ti.Platform.osname === 'android') {
+function rateApp(e) {
+	if (OS_ANDROID) {
 		Ti.Platform.openURL('https://play.google.com/store/apps/details?id=' + Alloy.CFG.festival.stores.googlePlay);
 	} else {
-		Ti.Platform.openURL('https://itunes.apple.com/de/app/abifestival/id' + Alloy.CFG.festival.stores.appstore);
+		var ReviewDialog = require('ti.reviewdialog');
+		
+		if (ReviewDialog.isSupported()) {
+			ReviewDialog.requestReview();
+			$.listView.deselectItem(e.sectionIndex, e.itemIndex);
+		} else {
+			Ti.Platform.openURL('https://itunes.apple.com/de/app/abifestival/id' + Alloy.CFG.festival.stores.appstore);
+		}
 	}
 }
 

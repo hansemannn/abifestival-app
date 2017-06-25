@@ -22,7 +22,7 @@ function loadInfos(args) {
 function refreshUI() {
 	var items = [];
 	
-	infos.forEach(function(info) {
+	infos && infos.forEach(function(info) {
 		items.push({
 			template: Ti.UI.LIST_ITEM_TEMPLATE_SUBTITLE,
 			properties: _.extend({
