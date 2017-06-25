@@ -1,10 +1,11 @@
 
 '.listView': {
-	rowHeight: 43
+	rowHeight: 43,
 }
 
 '.listView[platform=ios]': {
 	style: Ti.UI.iOS.ListViewStyle.GROUPED,
+	backgroundColor: '#f0f0f0'
 }
 
 'ListItem': {

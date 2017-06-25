@@ -1,0 +1,24 @@
+".segCtrlWrapper[formFactor=handheld]":{
+	height: 42,
+	width: Ti.UI.SIZE,
+	backgroundColor: 'transparent',
+	borderRadius: 0
+}
+".segCtrlWrapper[formFactor=tablet]":{
+	height: 64,
+	width: Ti.UI.SIZE,
+	backgroundColor: 'transparent',
+	borderRadius: 0
+}
+".segCtrlButtonContainer[formFactor=handheld]": {
+	height: 42,
+	width: Ti.UI.FILL,
+	backgroundColor: 'transparent',
+	layout: 'horizontal'
+}
+".segCtrlButtonContainer[formFactor=tablet]": {
+	height: 64,
+	width: Ti.UI.FILL,
+	backgroundColor: 'transparent',
+	layout: 'horizontal'
+}

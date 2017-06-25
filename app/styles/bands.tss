@@ -43,6 +43,7 @@
 }
 
 '#list': {
+	top: 50,
 	listSeparatorInsets: {
 		left: 70
 	}
@@ -51,4 +52,42 @@
 '#loader': {
 	indicatorColor: '#555',
 	style: Ti.UI.ActivityIndicatorStyle.BIG
+}
+
+".tabbedBarContainer": {
+	top: 0,
+	height: 50,
+	backgroundColor: '#f0f0f0'
+}
+
+'#tabbedBar': {
+	index: 0,	
+	width: 300,
+	height: 30
+}
+
+'#tabbedBar[platform=ios]': {
+	backgroundColor: Alloy.CFG.festival.ui.tintColor
+}
+
+'#tabbedBar[platform=android]': {
+	borderRadius: 6,
+	borderColor: Alloy.CFG.festival.ui.tintColor,
+	selectedButtonColor: Alloy.CFG.festival.ui.tintColor,
+	unselectedButtonColor: '#fff', 
+	selectedButtonTextColor: '#fff',
+	unselectedButtonTextColor: Alloy.CFG.festival.ui.tintColor,
+	font: {
+		fontWeight: 'bold',
+		fontSize: '14'
+	}
+}
+
+"#placeholder": {
+	text: '👀 Noch keine Bands vorhanden!',
+	color: '#777',
+	font: {
+		fontSize: 20
+	},
+	visible: false
 }

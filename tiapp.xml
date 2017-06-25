@@ -36,8 +36,8 @@
         <key>UIApplicationShortcutItems</key>
         <array>
             <dict>
-                <key>UIApplicationShortcutIconTypeFavorite</key>
-                <string>UIApplicationShortcutIconTypeAdd</string>
+                <key>UIApplicationShortcutItemIconType</key>
+                <string>UIApplicationShortcutIconTypeFavorite</string>
 
                 <key>UIApplicationShortcutItemTitle</key>
                 <string>Bands</string>

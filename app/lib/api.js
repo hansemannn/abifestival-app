@@ -15,7 +15,7 @@ exports.getNews = function(cb, error) {
 	}
 	
 	var request = new Request({
-		url : '/news/list?festival=' + Alloy.CFG.festival.id,
+		url : '/news/list?festival=' + Alloy.CFG.festival.id + '&sortby=playtime',
 		type : 'GET',
 		success : function(json) {
 			cb(_.extend(json, {success: true}), null);

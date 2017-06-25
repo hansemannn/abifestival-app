@@ -1,14 +1,14 @@
-var api = require('/api');
-var moment = require('alloy/moment');
-var bands = [];
-
-(function constructor(args) {
-	
-})(arguments[0]);
+var api = require('/api'),
+	moment = require('alloy/moment'),
+	bands = [],
+	days = Alloy.CFG.festival.days,
+	currentDay = days[0];
 
 function loadBands(args) {
 	var showLoader = args.showLoader || false;
 	showLoader && $.loader.show();
+	
+	initTabbedBar();
 	
 	api.getBands(function(_bands, error) {
 		bands = _bands;
@@ -18,10 +18,43 @@ function loadBands(args) {
 	});
 }
 
+function initTabbedBar() {
+	var labels = [];
+	
+	days.forEach(function(day) {
+		labels.push(day.name);
+	});
+	
+	if (OS_IOS) {
+		$.tabbedBar.setLabels(labels);
+	} else {
+		$.tabbedBar.init(labels, toggleDay);
+	}
+}
+
+function toggleDay(e) {
+	currentDay = days[e.index];
+	refreshUI();
+}
+
 function refreshUI() {
 	var items = [];
 
-	bands.forEach(function(band) {
+	OS_IOS && $.refreshControl.endRefreshing();
+	$.section.setItems([]);	
+
+	var filteredBands = _.filter(bands, function(band) {
+		return band.starttime.indexOf(currentDay.date) !== -1 && band.active === true;
+	});
+	
+	if (filteredBands.length === 0) {
+		$.placeholder.show();
+		return;
+	} else {
+		$.placeholder.hide();
+	}
+	
+	filteredBands.forEach(function(band) {
 		items.push({
 			template: "BandCell",
 			artist: {
@@ -34,7 +67,7 @@ function refreshUI() {
 				text: '📍 ' + band.location
 			},
 			slot: {
-				text: formattedTime(band.starttime, band.endtime)
+				text: formattedTime(band.time_tba, band.starttime, band.endtime)
 			},
 			properties: _.extend({
 				itemId: band.id,
@@ -44,16 +77,15 @@ function refreshUI() {
 		});
 	});
 	
-	$.list.setSections([Ti.UI.createListSection({items: items})]);	
-	OS_IOS && $.refreshControl.endRefreshing();
+	$.section.setItems(items);	
 }
 
 function isFavorite(bandId) {
 	return Ti.App.Properties.getList('favorites', []).indexOf(bandId) !== -1;
 }
 
-function formattedTime(start, end) {
-	return '⏰ ' + moment(start).format('HH:mm') + ' - ' + moment(end).format('HH:mm') + ' Uhr';
+function formattedTime(tba, start, end) {
+	return tba === true ? 'TBA' : '⏰ ' + moment(start).format('HH:mm') + ' - ' + moment(end).format('HH:mm') + ' Uhr';
 }
 
 function openBand(e) {

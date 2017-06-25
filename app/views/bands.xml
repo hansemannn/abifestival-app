@@ -1,5 +1,9 @@
 <Alloy>
 	<Window title="Bands" onOpen="onOpen">
+		<View class="tabbedBarContainer">
+			<Widget platform="android" src="com.skypanther.segmentedcontrol" id="tabbedBar" />
+			<TabbedBar platform="ios" id="tabbedBar" onClick="toggleDay" />
+		</View>
 		<ListView id="list" onItemclick="openBand" defaultItemTemplate="BandCell">
 			<Templates>
 				<ItemTemplate name="BandCell">
@@ -14,7 +18,9 @@
 				</ItemTemplate>
 			</Templates>
 			<RefreshControl id ="refreshControl" platform="ios" onRefreshstart="onPullToRefresh" />
+			<ListSection id="section" />
 		</ListView>
 		<ActivityIndicator id="loader" />
+		<Label id="placeholder" />
 	</Window>
 </Alloy>

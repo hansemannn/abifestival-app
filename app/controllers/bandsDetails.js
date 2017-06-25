@@ -1,4 +1,5 @@
 var moment = require('alloy/moment');
+var pushwoosh = require('com.pushwoosh.module');
 var FavoriteImage = {
 	Active: '/images/favIconActive.png',
 	Inactive: '/images/favIconInactive.png',
@@ -61,7 +62,13 @@ function toggleFavorite() {
 		favorites.push(band.id);
 	}
 	
+	// Update local persistence-layer
 	Ti.App.Properties.setList('favorites', favorites);	
+	
+	// Update remote push-tags
+	pushwoosh.setTags({ favorites: favorites });
+	
+	// Update UI
 	updateFavoritesImage();
 }
 
