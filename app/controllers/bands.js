@@ -3,13 +3,15 @@ var api = require('/api'),
 	bands = [],
 	days = Alloy.CFG.festival.days,
 	currentDay = days[0];
+	
+(function constructor(args) {
+	initTabbedBar();
+})(arguments[0]);
 
 function loadBands(args) {
 	var showLoader = args.showLoader || false;
 	showLoader && $.loader.show();
-	
-	initTabbedBar();
-	
+		
 	api.getBands(function(_bands, error) {
 		bands = _bands;
 		
