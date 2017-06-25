@@ -28,7 +28,8 @@ completely native user-experience.
 `Ti.UI.RefreshControl`, `Ti.Network`, `Ti.UI.TabGroup`, ...
 
 #### Modules
-- [x] [Ti.Pushwoosh](https://github.com/Pushwoosh/pushwoosh-appcelerator-titanium)
+- [x] [Ti.Pushwoosh](https://github.com/pushwoosh/pushwoosh-appcelerator-titanium)
+- [x] [Ti.ReviewDialog](https://github.com/hansemannn/titanium-review-dialog)
 
 ### Running the App
 

@@ -56,9 +56,9 @@ function refreshUI() {
 		$.placeholder.hide();
 	}
 	
-	filteredBands.forEach(function(band) {
+	filteredBands && filteredBands.forEach(function(band) {
 		items.push({
-			template: "BandCell",
+			template: 'BandCell',
 			artist: {
 				text: band.name.toUpperCase() + (isFavorite(band.id) ? ' ⭐️' : '')
 			},
