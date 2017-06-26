@@ -8,7 +8,7 @@ and has recently been rewritten to Alloy. It is open source to share the concept
 application and it includes native features like remote push-notifications with PushWoosh and a 
 completely native user-experience.
 
-<img alt="App Store" src="https://abload.de/img/affvxub.png" width="900" />
+<img alt="App Store" src="https://abload.de/img/68747470733a2f2f61626g3xd4.png" width="900" />
 
 ### Features (Selection)
 
