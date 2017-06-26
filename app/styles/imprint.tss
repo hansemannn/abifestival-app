@@ -2,6 +2,6 @@
 	url : '/branding/web/imprint.html',
 	hideShadow: true,
 	top : 0,
-	backgroundColor: '#f0f0f0',
+	backgroundColor: '#fff',
 	enableZoomControls: false
 }
