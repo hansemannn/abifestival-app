@@ -62,10 +62,6 @@ var Request = function (_args) {
 		}
 	};
 
-	function getCredentials() {
-		return require('/auth').getCredentials();
-	};
-
 	function refreshCache() {
 		c = Titanium.Network.createHTTPClient({
 			cache: false,
@@ -119,14 +115,6 @@ var Request = function (_args) {
 					response = null;
 				}
 
-				if (status == 400 && response && response.error && response.error.code == 104) {
-					var api = require('/api');
-					api.reauth(function () {
-						_this.load();
-					});
-					return;
-				}
-
 				var errorResponse = {
 					code: e.code,
 					response: response,
@@ -162,10 +150,11 @@ var Request = function (_args) {
 		}
 
 		c.open(reqType, url);
-		
-		var credentials = require('/auth').credentials;
-
-		c.setRequestHeader('Authorization', 'Basic ' + Titanium.Utils.base64encode(credentials.username + ':' + credentials.password));
+				
+		try {
+			var credentials = equire('/auth').credentials;
+			c.setRequestHeader('Authorization', 'Basic ' + Titanium.Utils.base64encode(credentials.username + ':' + credentials.password));
+		} catch(e) {}
 
 		_.each(args.headers, function (header) {
 			if (header.length != 2) {

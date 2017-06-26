@@ -1,5 +1,11 @@
 var Request = require('/request');
-var isDemo = require('auth').isDemo();
+var isDemo;
+
+try {
+	isDemo = require('auth').isDemo();
+} catch(e) {
+	isDemo = true;
+}
 
 function loadLocalJSON(identifier) {
 	return JSON.parse(Ti.Filesystem.getFile(Ti.Filesystem.getResourcesDirectory(), 'json/' + identifier + '.json').read());
