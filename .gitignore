@@ -13,3 +13,5 @@ Thumbs.db
 /app/lib/auth.js
 /AF-Push-Dev.p12
 /AF-Push-PROD.p12
+/android-keystore
+/dist
