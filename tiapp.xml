@@ -3,7 +3,7 @@
   xmlns:ti="http://ti.appcelerator.org">
   <id>de.ncn.abifestival</id>
   <name>Abifestival</name>
-  <version>1.0</version>
+  <version>6.0.0.0</version>
   <publisher>not specified</publisher>
   <url>unspecified</url>
   <description/>
@@ -50,7 +50,7 @@
     </plist>
   </ios>
   <android xmlns:android="http://schemas.android.com/apk/res/android">
-      <manifest android:installLocation="preferExternal" android:versionCode="23" android:versionName="6.0.0" package="de.ncn.abifestival">
+      <manifest android:installLocation="preferExternal" android:versionCode="24" android:versionName="6.0.0" package="de.ncn.abifestival">
           <application android:screenOrientation="portrait" android:theme="@style/abifestival" />
       </manifest>
   </android>
