@@ -1,6 +1,6 @@
 <Alloy>
 	<Window title="Einstellungen">
-		<ListView class="listView" onItemclick="performAction" defaultItemTemplate="Ti.UI.LIST_ITEM_TEMPLATE_DEFAULT">
+		<ListView id="listView" onItemclick="performAction" defaultItemTemplate="Ti.UI.LIST_ITEM_TEMPLATE_DEFAULT">
 			<ListSection>
 				<ListItem title="Impressum" itemId="imprint" />
 				<ListItem title="Bewertung abgeben" itemId="rateApp" />
