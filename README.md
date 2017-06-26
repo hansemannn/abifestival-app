@@ -27,9 +27,10 @@ completely native user-experience.
 `Ti.App.iOS.ApplicationShortcuts`,  `Ti.Filesystem`, `Ti.UI.iOS.TabbedBar`, `Ti.UI.ListView`, 
 `Ti.UI.RefreshControl`, `Ti.Network`, `Ti.UI.TabGroup`, ...
 
-#### Modules
-- [x] [Ti.Pushwoosh](https://github.com/pushwoosh/pushwoosh-appcelerator-titanium)
-- [x] [Ti.ReviewDialog](https://github.com/hansemannn/titanium-review-dialog)
+#### Modules / Widgets
+- [x] [Ti.Pushwoosh](https://github.com/pushwoosh/pushwoosh-appcelerator-titanium) by [@pushwoosh](https://github.com/pushwoosh)
+- [x] [Ti.ReviewDialog](https://github.com/hansemannn/titanium-review-dialog) by myself 😇
+- [x] [SegmentedControl](https://github.com/skypanther/SegmentedControl) by [@skypanther](https://github.com/skypanther)
 
 ### Running the App
 
